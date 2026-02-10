@@ -1,11 +1,11 @@
 import { authService } from './auth.service.js';
 
-function signup(req, res) {
+async function signup(req, res) {
   try {
     const userData = req.body;
-    
-    const result = authService.signup(userData);
-    
+
+    const result = await authService.signup(userData);
+
     return res.status(201).json({
       success: true,
       message: 'User signed up successfully',
@@ -19,12 +19,13 @@ function signup(req, res) {
   }
 }
 
-function login(req, res) {
+async function login(req, res) {
   try {
-    const { email, password } = req.body;
-    
-    const result = authService.login(email, password);
-    
+    const { email, phone, password } = req.body;
+    const identifier = email || phone;
+
+    const result = await authService.login(identifier, password);
+
     return res.status(200).json({
       success: true,
       message: 'User logged in successfully',

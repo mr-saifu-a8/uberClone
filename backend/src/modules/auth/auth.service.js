@@ -1,10 +1,11 @@
-import { User } from "../models/user.model.js";
+import { User } from "../model/user.model.js";
+
 
 class AuthService {
-    
-    signup(userData) {
+
+    async signup(userData) {
         try {
-            const existingUser = User.findOne({ 
+            const existingUser = await User.findOne({
                 $or: [
                     { email: userData.email },
                     { phone: userData.phone }
@@ -19,7 +20,7 @@ class AuthService {
                 }
             }
 
-            const user = User.create(userData);
+            const user = await User.create(userData);
             const token = user.generateAuthToken();
 
             return {
@@ -39,26 +40,31 @@ class AuthService {
         }
     }
 
-    login(email, password) {
+    async login(identifier, password) {
         try {
-            const user = User.findOne({ email }).select('+password');
-            
+            const user = await User.findOne({
+                $or: [
+                    { email: identifier },
+                    { phone: identifier }
+                ]
+            }).select('+password');
+
             if (!user) {
-                throw new Error('Invalid credentials email invalid');
+                throw new Error('Invalid credentials');
             }
-            
-            const isPasswordValid = user.comparePassword(password);
-            
+
+            const isPasswordValid = await user.comparePassword(password);
+
             if (!isPasswordValid) {
                 throw new Error('Invalid credentials password invalid');
             }
-            
+
             if (!user.isActive) {
                 throw new Error('Account is deactivated. Please contact support.');
             }
-            
+
             const token = user.generateAuthToken();
-            
+
             return {
                 user: {
                     _id: user._id,
