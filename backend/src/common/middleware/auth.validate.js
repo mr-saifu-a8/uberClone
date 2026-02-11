@@ -5,7 +5,7 @@ export const validate = (schema) => {
         body: req.body,
       });
 
-      return next();
+      next();
     } catch (error) {
       console.log("Validation Error caught:", error);
       return res.status(400).json({
