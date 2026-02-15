@@ -1,1 +1,20 @@
 @import "tailwindcss";
+@font-face {
+    font-family: regular;
+    src: url('./assets/font/UberMove-Regular.woff2');
+}
+@font-face {
+    font-family: font2-bold;
+    src: url('./assets/font/UberMove-Bold.woff2');
+}
+@font-face {
+    font-family: font3-medium;
+    src: url('./assets/font/UberMoveText-Medium.woff2');
+}
+@font-face {
+    font-family: text-regular;
+    src: url('./assets/font/UberMoveText-Regular.woff2');
+}
+body , #root{
+    font-family: text-regular;
+}
