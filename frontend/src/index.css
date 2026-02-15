@@ -18,3 +18,16 @@
 body , #root{
     font-family: text-regular;
 }
+
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}

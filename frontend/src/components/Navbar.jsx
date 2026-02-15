@@ -23,7 +23,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="h-16 w-full flex px-32 justify-between bg-black text-white items-center">
+    <div className="h-16 sticky w-full flex px-32 justify-between bg-black text-white items-center">
       {/* Left Section */}
       <div className="flex items-center gap-2">
         <img src={logo} alt="Uber Logo" />
