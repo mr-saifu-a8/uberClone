@@ -1,0 +1,53 @@
+import React from "react";
+import { CgMenu } from "react-icons/cg";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { IoSearch } from "react-icons/io5";
+
+const cancellationTopics = [
+  "Cancelling a ride",
+];
+
+const CancellationPolicy = () => {
+  return (
+    <div className="bg-black pl-32 min-h-screen text-white px-16 py-12">
+      
+      {/* Top Bar */}
+      <div className="flex justify-between items-center mb-14">
+        <a
+          href="/"
+          className="underline text-zinc-300 hover:text-white transition"
+        >
+          Home
+        </a>
+
+        <div className="bg-zinc-900 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer hover:bg-zinc-800 transition">
+          <IoSearch size={20} />
+        </div>
+      </div>
+
+      {/* Page Title */}
+      <h1 className="text-5xl font-semibold mb-12">
+        Cancellation policy
+      </h1>
+
+      {/* Topics List */}
+      <div className="border-t border-zinc-800 divide-y divide-zinc-800 max-w-4xl">
+        {cancellationTopics.map((item, index) => (
+          <div
+            key={index}
+            className="flex justify-between items-center py-6 cursor-pointer hover:bg-zinc-900 transition"
+          >
+            <div className="flex items-center gap-4 text-zinc-200">
+              <CgMenu size={20} className="text-zinc-400" />
+              <span className="text-lg">{item}</span>
+            </div>
+
+            <MdKeyboardArrowRight size={22} className="text-zinc-500" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CancellationPolicy;
