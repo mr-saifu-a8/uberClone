@@ -4,6 +4,7 @@ import AboutDropDown from './components/AboutDropDown'
 import HomePage from './pages/HomePage'
 import Footer from './components/Footer'
 import HelpPage from './pages/HelpPage'
+import UberWalletPage from './pages/UberWalletPage'
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
      <Footer/>
       */}
 
-      <HelpPage/>
+      {/* <HelpPage/> */}
+      <UberWalletPage/>
     </div>
   )
 }
