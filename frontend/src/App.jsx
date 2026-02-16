@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import Footer from './components/Footer'
 import HelpPage from './pages/HelpPage'
 import UberWalletPage from './pages/UberWalletPage'
+import ActivityPage from './pages/ActivityPage'
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
       */}
 
       {/* <HelpPage/> */}
-      <UberWalletPage/>
+      {/* <UberWalletPage/> */}
+      <ActivityPage/>
     </div>
   )
 }
