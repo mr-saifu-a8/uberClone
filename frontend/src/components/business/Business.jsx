@@ -1,5 +1,5 @@
+import Footer from "../Footer";
 import BlueCTASection from "./BlueCTASection";
-import Footer from "./Footer";
 import GetStartedSection from "./GetStartedSection";
 import GlobalPlatformSection from "./GlobalPlatformSection";
 import HeroSection from "./HeroSection";
@@ -21,7 +21,7 @@ export default function Business() {
       <TestimonialSection />
       <BlueCTASection />
       <LearningMoreSection />
-      <Footer />
+     <Footer/>
     </div>
   );
 }
