@@ -5,6 +5,7 @@ import { CgMenu } from "react-icons/cg";
 import { Mail } from "lucide-react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import model19 from "../assets/images/model19.png";
+import { Link } from "react-router-dom";
 
 const topics = [
   { icon: <IoIosCar size={20} />, title: "Help with a trip" },
@@ -22,11 +23,10 @@ const HelpPage = () => {
   return (
     <div className="bg-black  min-h-screen text-white pl-32  py-14">
       <div className="flex justify-between gap-16">
-        
         {/* LEFT SECTION */}
         <div className="w-[60%]">
-
           {/* Heading */}
+          <Link to='/' className="text-xl  mb-10">Home</Link>
           <h1 className="text-5xl font-semibold leading-tight mb-10">
             Support Resources for Uber Riders
           </h1>
@@ -66,9 +66,7 @@ const HelpPage = () => {
 
           {/* Support Messages */}
           <div className="mt-16">
-            <h2 className="text-2xl font-semibold mb-6">
-              Support messages
-            </h2>
+            <h2 className="text-2xl font-semibold mb-6">Support messages</h2>
 
             <div className="flex justify-between items-center py-6 border-t border-b border-zinc-800 cursor-pointer hover:bg-zinc-900 transition">
               <div className="flex items-center gap-4">

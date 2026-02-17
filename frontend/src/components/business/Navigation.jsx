@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { TbWorld } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,11 +11,13 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
-            <a href="/" className="text-xl font-bold">
+            <Link
+              to="/"
+              className="text-2xl  flex flex-col font-[font3-medium]"
+            >
               Uber
-              <br />
-              <span className="text-sm font-normal">for Business</span>
-            </a>
+              <span className="text-sm">for Business</span>
+            </Link>
 
             <div className="hidden lg:flex items-center gap-6">
               <button className="text-sm hover:text-gray-300 flex items-center gap-1">
@@ -34,22 +38,35 @@ export default function Navigation() {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center gap-4">
-            <button className="text-sm flex items-center gap-1">
-              <Globe className="w-4 h-4" /> EN
-            </button>
-            <a href="#" className="text-sm hover:text-gray-300">
+          {/* Right Section */}
+          <div className="flex items-center gap-2">
+            <Link
+              to="/en"
+              className="flex py-2 hover:bg-zinc-900 rounded-full px-3 items-center gap-1"
+            >
+              <TbWorld size={18} /> EN
+            </Link>
+
+            <Link
+              to="/help"
+              className="py-2 hover:bg-zinc-900 rounded-full px-3"
+            >
               Help
-            </a>
-            <a href="#" className="text-sm hover:text-gray-300">
+            </Link>
+
+            <Link
+              to="/auth/login"
+              className="py-2 hover:bg-zinc-900 rounded-full px-3"
+            >
               Log in
-            </a>
-            <a
-              href="#"
-              className="text-sm px-6 py-2.5 bg-white text-black rounded-full font-medium hover:bg-gray-200"
+            </Link>
+
+            <Link
+              to="/auth/signup"
+              className="py-2 bg-white text-black font-[font3-medium] rounded-full px-3"
             >
               Sign up
-            </a>
+            </Link>
           </div>
 
           <button

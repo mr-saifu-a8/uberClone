@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
   const [input, setInput] = useState("");
@@ -13,9 +14,9 @@ export default function LoginForm() {
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans">
       {/* Header */}
-      <header className="bg-black px-6 py-5 ">
+      <Link to='/' className="bg-black px-6 py-5 ">
         <img src="/kindpng_1462157.png" alt="Uber Logo" className="w-15 mx-8" />
-      </header>
+      </Link>
 
       {/* Main */}
       <main className="flex-1 flex items-center justify-center px-6">

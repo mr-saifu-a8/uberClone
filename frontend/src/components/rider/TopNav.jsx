@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Car, Wrench, UtensilsCrossed, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function TopNav() {
   const [activeTab, setActiveTab] = useState("trip");
@@ -8,7 +9,9 @@ export default function TopNav() {
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-8">
-          <h1 className="text-2xl font-bold">Uber</h1>
+          <Link to="/" className="text-2xl font-bold">
+            Uber
+          </Link>
 
           <div className="flex items-center gap-6">
             <button
@@ -50,13 +53,20 @@ export default function TopNav() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100 rounded-full transition-all">
+          <Link
+            to="/auth/login"
+            className="py-2 flex items-center gap-2   rounded-full px-3"
+          >
             <User className="w-4 h-4" />
-            <span>Log in</span>
-          </button>
-          <button className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-all">
+            Log in
+          </Link>
+
+          <Link
+            to="/auth/signup"
+            className="py-2 px-6 py-2.5 bg-black text-white font-[font3-medium] rounded-full px-3"
+          >
             Sign up
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

@@ -6,16 +6,17 @@ import bage from "../../assets/images/bage.svg";
 import { BsFillClockFill } from "react-icons/bs";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { BsSendFill } from "react-icons/bs";
-import Suggestions from "../../components/Suggestions";
-import PlanForLater from "../../components/PlanForLater";
-import HeroPages from "../../components/HeroPages";
-import Navbar from "../Navbar";
-import Footer from './../Footer';
-
+import Suggestions from "../components/Suggestions";
+import PlanForLater from "../components/PlanForLater";
+import HeroPages from "../components/HeroPages";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 const HomePage = () => {
   return (
-    <>
-      <Navbar/>
+    <div className="">
+         <div className="sticky top-0 z-50 bg-white shadow">
+        <Navbar />
+      </div>
       <div className="h-16  flex  justify-between px-32 items-center">
         <h1 className="font-bold text-2xl">Ride</h1>
         <div className="flex  items-center gap-4 text-zinc-600">
@@ -185,8 +186,9 @@ const HomePage = () => {
       </div>
       <PlanForLater />
       <HeroPages />
-      <Footer/>
-  </>
+       
+       <Footer/>
+    </div>
   );
 };
 

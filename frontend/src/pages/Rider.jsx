@@ -1,10 +1,11 @@
-import TopNav from "../rider/TopNav";
-import Sidebar from "../rider/Sidebar";
-import MapView from "../rider/MapView";
+import TopNav from "../components/rider/TopNav";
+import Sidebar from "../components/rider/Sidebar";
+import MapView from "../components/rider/MapView";
 
 export default function Rider() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased">
+     
       <TopNav />
 
       <div className="h-[calc(100vh-73px)] p-6">
