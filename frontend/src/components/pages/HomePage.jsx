@@ -11,9 +11,10 @@ import PlanForLater from "../../components/PlanForLater";
 import HeroPages from "../../components/HeroPages";
 import Navbar from "../Navbar";
 import Footer from './../Footer';
+
 const HomePage = () => {
   return (
-    <div className="">
+    <>
       <Navbar/>
       <div className="h-16  flex  justify-between px-32 items-center">
         <h1 className="font-bold text-2xl">Ride</h1>
@@ -184,8 +185,8 @@ const HomePage = () => {
       </div>
       <PlanForLater />
       <HeroPages />
-      <Footer
-    </div>
+      <Footer/>
+  </>
   );
 };
 

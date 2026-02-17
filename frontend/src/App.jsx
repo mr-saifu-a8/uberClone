@@ -2,6 +2,7 @@ import LanguageSelect from "./components/LanguageSelect";
 import LoginForm from "./components/LoginForm";
 import HomePage from "./components/pages/HomePage";
 import SeePrice from "./components/SeePrice";
+import SignupDropdown from "./components/SignpDropdown";
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       {/* <HomePage/> */}
       {/* <LanguageSelect/> */}
       {/* <LoginForm/> */}
-      <SeePrice/>
+      {/* <SeePrice/> */}
+      <SignupDropdown/>
     </div>
   );
 };
