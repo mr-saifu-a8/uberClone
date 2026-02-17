@@ -1,12 +1,15 @@
-import React from "react";
-import Business from "./components/business/Business";
-import Rider from "./components/pages/Rider";
+import LanguageSelect from "./components/LanguageSelect";
+import LoginForm from "./components/LoginForm";
+import HomePage from "./components/pages/HomePage";
+import SeePrice from "./components/SeePrice";
 
 const App = () => {
   return (
     <div>
-      <Rider/>
-      {/* <Business /> */}
+      {/* <HomePage/> */}
+      {/* <LanguageSelect/> */}
+      {/* <LoginForm/> */}
+      <SeePrice/>
     </div>
   );
 };

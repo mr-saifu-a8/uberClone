@@ -1,17 +1,20 @@
 import React from "react";
 import { MdLocationOn } from "react-icons/md";
-import model1 from "../assets/images/model1.webp";
-import model9 from "../assets/images/model9.png";
-import bage from "../assets/images/bage.svg";
+import model1 from "../../assets/images/model1.webp";
+import model9 from "../../assets/images/model9.png";
+import bage from "../../assets/images/bage.svg";
 import { BsFillClockFill } from "react-icons/bs";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { BsSendFill } from "react-icons/bs";
-import Suggestions from "../components/Suggestions";
-import PlanForLater from "../components/PlanForLater";
-import HeroPages from "../components/HeroPages";
+import Suggestions from "../../components/Suggestions";
+import PlanForLater from "../../components/PlanForLater";
+import HeroPages from "../../components/HeroPages";
+import Navbar from "../Navbar";
+import Footer from './../Footer';
 const HomePage = () => {
   return (
     <div className="">
+      <Navbar/>
       <div className="h-16  flex  justify-between px-32 items-center">
         <h1 className="font-bold text-2xl">Ride</h1>
         <div className="flex  items-center gap-4 text-zinc-600">
@@ -181,7 +184,7 @@ const HomePage = () => {
       </div>
       <PlanForLater />
       <HeroPages />
-      
+      <Footer
     </div>
   );
 };
