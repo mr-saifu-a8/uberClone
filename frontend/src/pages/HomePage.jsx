@@ -1,8 +1,8 @@
 import React from "react";
 import { MdLocationOn } from "react-icons/md";
-import model1 from "../../assets/images/model1.webp";
-import model9 from "../../assets/images/model9.png";
-import bage from "../../assets/images/bage.svg";
+import model1 from "../assets/images/model1.webp";
+import model9 from "../assets/images/model9.png";
+import bage from "../assets/images/bage.svg";
 import { BsFillClockFill } from "react-icons/bs";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { BsSendFill } from "react-icons/bs";

@@ -1,14 +1,89 @@
+// // import React, { useState, useRef, useEffect } from "react";
+// // import { TbWorld } from "react-icons/tb";
+// // import { RiArrowDropDownLine } from "react-icons/ri";
+// // import logo from "../assets/images/logo.svg";
+// // import AboutDropDown from "./AboutDropDown";
+
+// // const Navbar = () => {
+// //   const [toggle, setToggle] = useState(false);
+// //   const dropdownRef = useRef(null);
+
+// //   // Close dropdown on outside click
+// //   useEffect(() => {
+// //     const handleClickOutside = (event) => {
+// //       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+// //         setToggle(false);
+// //       }
+// //     };
+
+// //     document.addEventListener("mousedown", handleClickOutside);
+// //     return () => {
+// //       document.removeEventListener("mousedown", handleClickOutside);
+// //     };
+// //   }, []);
+
+// //   return (
+// //     <div className="h-16 sticky w-full flex px-32 justify-between bg-black text-white items-center">
+// //       {/* Left Section */}
+// //       <div className="flex items-center gap-2">
+// //         <img src={logo} alt="Uber Logo" />
+
+// //         <h3 className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+// //           Ride
+// //         </h3>
+// //         <h3 className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+// //           Drive
+// //         </h3>
+// //         <h3 className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+// //           Business
+// //         </h3>
+
+// //         <div ref={dropdownRef} className="relative">
+// //           <h3
+// //             onClick={() => setToggle((prev) => !prev)}
+// //             className="flex cursor-pointer items-center gap-1 py-2 hover:bg-zinc-900 rounded-full px-3"
+// //           >
+// //             About <RiArrowDropDownLine size={25} />
+// //           </h3>
+
+// //           {toggle && <AboutDropDown />}
+// //         </div>
+// //       </div>
+
+// //       {/* Right Section */}
+// //       <div className="flex items-center gap-2">
+// //         <h2 className="flex py-2 hover:bg-zinc-900 rounded-full px-3 items-center gap-1">
+// //           <TbWorld size={18} /> EN
+// //         </h2>
+
+// //         <h2 className="py-2 hover:bg-zinc-900 rounded-full px-3">
+// //           Help
+// //         </h2>
+
+// //         <button className="py-2 hover:bg-zinc-900 rounded-full px-3">
+// //           Log in
+// //         </button>
+
+// //         <button className="py-2 bg-white text-black font-[font3-medium] rounded-full px-3">
+// //           Sign up
+// //         </button>
+// //       </div>
+// //     </div>
+// //   );
+// // };
+// // export default Navbar;
+
 // import React, { useState, useRef, useEffect } from "react";
 // import { TbWorld } from "react-icons/tb";
 // import { RiArrowDropDownLine } from "react-icons/ri";
+// import { Link } from "react-router-dom";
 // import logo from "../assets/images/logo.svg";
 // import AboutDropDown from "./AboutDropDown";
-
+// import SignpDropdown from './SignpDropdown'
 // const Navbar = () => {
 //   const [toggle, setToggle] = useState(false);
 //   const dropdownRef = useRef(null);
 
-//   // Close dropdown on outside click
 //   useEffect(() => {
 //     const handleClickOutside = (event) => {
 //       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -24,27 +99,33 @@
 
 //   return (
 //     <div className="h-16 sticky w-full flex px-32 justify-between bg-black text-white items-center">
+      
 //       {/* Left Section */}
 //       <div className="flex items-center gap-2">
-//         <img src={logo} alt="Uber Logo" />
+        
+//         <Link to="/">
+//           <img src={logo} alt="Uber Logo" />
+//         </Link>
 
-//         <h3 className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+//         <Link to="/ride" className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
 //           Ride
-//         </h3>
-//         <h3 className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+//         </Link>
+
+//         <Link to="/drive" className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
 //           Drive
-//         </h3>
-//         <h3 className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+//         </Link>
+
+//         <Link to="/business" className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
 //           Business
-//         </h3>
+//         </Link>
 
 //         <div ref={dropdownRef} className="relative">
-//           <h3
+//           <div
 //             onClick={() => setToggle((prev) => !prev)}
 //             className="flex cursor-pointer items-center gap-1 py-2 hover:bg-zinc-900 rounded-full px-3"
 //           >
 //             About <RiArrowDropDownLine size={25} />
-//           </h3>
+//           </div>
 
 //           {toggle && <AboutDropDown />}
 //         </div>
@@ -52,25 +133,44 @@
 
 //       {/* Right Section */}
 //       <div className="flex items-center gap-2">
-//         <h2 className="flex py-2 hover:bg-zinc-900 rounded-full px-3 items-center gap-1">
+        
+//         <Link
+//           to="/en"
+//           className="flex py-2 hover:bg-zinc-900 rounded-full px-3 items-center gap-1"
+//         >
 //           <TbWorld size={18} /> EN
-//         </h2>
+//         </Link>
 
-//         <h2 className="py-2 hover:bg-zinc-900 rounded-full px-3">
+//         <Link
+//           to="/help"
+//           className="py-2 hover:bg-zinc-900 rounded-full px-3"
+//         >
 //           Help
-//         </h2>
+//         </Link>
 
-//         <button className="py-2 hover:bg-zinc-900 rounded-full px-3">
+//         <Link
+//           to="/auth/login"
+//           className="py-2 hover:bg-zinc-900 rounded-full px-3"
+//         >
 //           Log in
-//         </button>
+//         </Link>
 
-//         <button className="py-2 bg-white text-black font-[font3-medium] rounded-full px-3">
+//        <div className="relative">
+//        <Link
+//           to="/auth/signup"
+//           className="py-2 bg-white text-black font-[font3-medium] rounded-full px-3"
+//         >
 //           Sign up
-//         </button>
+//         </Link>
+//      <div className="absolute relative ">
+//      <SignpDropdown/>
+//      </div>
+//        </div>
 //       </div>
 //     </div>
 //   );
 // };
+
 // export default Navbar;
 
 import React, { useState, useRef, useEffect } from "react";
@@ -79,15 +179,25 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import AboutDropDown from "./AboutDropDown";
+import SignpDropdown from "./SignpDropdown";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [signupToggle, setSignupToggle] = useState(false);
+
   const dropdownRef = useRef(null);
+  const signupRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // Close About dropdown
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setToggle(false);
+      }
+
+      // Close Signup dropdown
+      if (signupRef.current && !signupRef.current.contains(event.target)) {
+        setSignupToggle(false);
       }
     };
 
@@ -107,18 +217,28 @@ const Navbar = () => {
           <img src={logo} alt="Uber Logo" />
         </Link>
 
-        <Link to="/ride" className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+        <Link
+          to="/ride"
+          className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3"
+        >
           Ride
         </Link>
 
-        <Link to="/drive" className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+        <Link
+          to="/drive"
+          className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3"
+        >
           Drive
         </Link>
 
-        <Link to="/business" className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3">
+        <Link
+          to="/business"
+          className="cursor-pointer py-2 hover:bg-zinc-900 rounded-full px-3"
+        >
           Business
         </Link>
 
+        {/* About Dropdown */}
         <div ref={dropdownRef} className="relative">
           <div
             onClick={() => setToggle((prev) => !prev)}
@@ -127,7 +247,11 @@ const Navbar = () => {
             About <RiArrowDropDownLine size={25} />
           </div>
 
-          {toggle && <AboutDropDown />}
+          {toggle && (
+            <div className="absolute mt-2">
+              <AboutDropDown />
+            </div>
+          )}
         </div>
       </div>
 
@@ -155,12 +279,21 @@ const Navbar = () => {
           Log in
         </Link>
 
-        <Link
-          to="/auth/signup"
-          className="py-2 bg-white text-black font-[font3-medium] rounded-full px-3"
-        >
-          Sign up
-        </Link>
+        {/* Sign Up Dropdown */}
+        <div ref={signupRef} className="relative">
+          <div
+            onClick={() => setSignupToggle((prev) => !prev)}
+            className="py-2 bg-white text-black font-[font3-medium] rounded-full px-3 cursor-pointer"
+          >
+            Sign up
+          </div>
+
+          {signupToggle && (
+            <div className="absolute right-0 mt-3.5">
+              <SignpDropdown />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

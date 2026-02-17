@@ -26,27 +26,23 @@ export default function SignupDropdown() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="min-h-screen flex items-center justify-center font-sans antialiased">
-      {/* Card */}
-      <div className="bg-white rounded-3xl shadow-2xl w-50 px-0 overflow-hidden">
-        {menuItems.map((item, index) => (
-          <div key={item.label}>
-            {/* Menu Row */}
-            <button
-              onMouseEnter={() => setHovered(index)}
-              onMouseLeave={() => setHovered(null)}
-              className={`w-full flex items-center justify-between px-8 py-5  duration-150 ${
-                hovered === index ? "text-gray-500" : "bg-white"
-              }`}
-            >
-              <span className="text-xl font-bold cursor-pointer tracking-tight">
-                {item.label}
-              </span>
-              <span>{item.icon}</span>
-            </button>
-          </div>
-        ))}
-      </div>
+    <div className="bg-white rounded-3xl shadow-2xl w-52 overflow-hidden">
+      {menuItems.map((item, index) => (
+        <div key={item.label}>
+          <button
+            onMouseEnter={() => setHovered(index)}
+            onMouseLeave={() => setHovered(null)}
+            className={`w-full flex items-center text-black justify-between px-6 py-4 transition-all duration-150 ${
+              hovered === index ? "bg-gray-100 text-gray-700" : "bg-white"
+            }`}
+          >
+            <span className="text-lg font-bold tracking-tight">
+              {item.label}
+            </span>
+            <span>{item.icon}</span>
+          </button>
+        </div>
+      ))}
     </div>
   );
 }

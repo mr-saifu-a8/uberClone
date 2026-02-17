@@ -1,13 +1,13 @@
-import Footer from "../Footer";
-import BlueCTASection from "../business/BlueCTASection";
-import GetStartedSection from "../business/GetStartedSection";
-import GlobalPlatformSection from "../business/GlobalPlatformSection";
-import HeroSection from "../business/HeroSection";
-import HowCompaniesSection from "../business/HowCompaniesSection";
-import LearningMoreSection from "../business/LearningMoreSection";
-import LogosSection from "../business/LogosSection";
-import Navigation from "../business/Navigation";
-import TestimonialSection from "../business/TestimonialSection";
+import Footer from "../components/Footer";
+import BlueCTASection from "../components/business/BlueCTASection";
+import GetStartedSection from "../components/business/GetStartedSection";
+import GlobalPlatformSection from "../components/business/GlobalPlatformSection";
+import HeroSection from "../components/business/HeroSection";
+import HowCompaniesSection from "../components/business/HowCompaniesSection";
+import LearningMoreSection from "../components/business/LearningMoreSection";
+import LogosSection from "../components/business/LogosSection";
+import Navigation from "../components/business/Navigation";
+import TestimonialSection from "../components/business/TestimonialSection";
 
 export default function Business() {
   return (
