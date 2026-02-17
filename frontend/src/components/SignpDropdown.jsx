@@ -35,11 +35,11 @@ export default function SignupDropdown() {
             <button
               onMouseEnter={() => setHovered(index)}
               onMouseLeave={() => setHovered(null)}
-              className={`w-full flex items-center justify-between px-8 py-5 transition-colors duration-150 ${
-                hovered === index ? "bg-gray-50" : "bg-white"
+              className={`w-full flex items-center justify-between px-8 py-5  duration-150 ${
+                hovered === index ? "text-gray-500" : "bg-white"
               }`}
             >
-              <span className="text-xl font-bold text-black tracking-tight">
+              <span className="text-xl font-bold cursor-pointer tracking-tight">
                 {item.label}
               </span>
               <span>{item.icon}</span>
